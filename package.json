@@ -1,0 +1,15 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Aubry Nobel Niyonkuru",
+  "license": "ISC",
+  "description": "Learning Node.js and MongoDB",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
