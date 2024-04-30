@@ -2,9 +2,10 @@ const express = require('express');
 const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes');
 const app = express();
-
 // Middleware
 app.use(express.json());
+// Access html,css and img files in the folder public
+app.use(express.static(`${__dirname}/public`));
 
 app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();

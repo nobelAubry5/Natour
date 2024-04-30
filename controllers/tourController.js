@@ -11,6 +11,17 @@ exports.checkId = (req, res, next, val) => {
   }
   next();
 };
+// Create a checkBody middleware
+// Check if a body contains the name and the price property
+// If not, send back 400 (Missing name or price)
+// Add it to the POST handler stack
+
+exports.checkBody = (req, res, next) => {
+  if (!req.body.name || !req.body.price) {
+    res.status(400).json({ status: 'Fail', message: 'Missing name or price' });
+  }
+  next();
+};
 
 exports.getAllTours = (req, res) => {
   console.log(req.requestTime);
